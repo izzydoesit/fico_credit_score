@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import NavBar from '../NavBar/NavBar'
 import Score from '../Score/Score'
-import Factors from '../FactorList/FactorList'
+import FactorList from '../FactorList/FactorList'
+import TipList from '../TipList/TipList'
 import './App.css';
 
 class App extends Component {
@@ -11,7 +11,8 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Score />
-        <Factors />
+        <FactorList />
+        <TipList />
       </div>
     );
   }
