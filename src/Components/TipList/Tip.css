@@ -1,0 +1,34 @@
+.tip-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-self: stretch;
+  align-items: center;
+  margin: 0 1%;
+  padding: 3%;
+  -webkit-box-shadow: 1px 1px 3px 4px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 3px 4px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 3px 4px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.tip-item:hover {
+  background-color: #F6F7F8;
+}
+
+.tip-description {
+  font-size: 0.7em;
+}
+
+.tip-points {
+  padding: 3%;
+  background-color: #aa44ff;
+  color: #fff;
+  border-radius: 100px;
+}
+
+.tip-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}

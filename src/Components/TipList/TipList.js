@@ -1,37 +1,24 @@
+// @flow
+
 import React, { Component } from 'react';
 import Tip from './Tip';
 import './TipList.css';
 
-const tips = [
-  {
-    title: 'Add a new Credit Card',
-    description: 'Lorem ipsum dolor amet paleo viral yuccie ramps butcher. Bicycle rights direct trade unicorn williamsburg palo santo.',
-    estimatedImpact: 4,
-  },
-  {
-    title: 'Add an Auto Loan',
-    description: 'VHS master cleanse sartorial, tofu truffaut succulents prism poutine PBR&B.',
-    estimatedImpact: 4,
-  },
-  {
-    title: 'Pay bills on time for next 6 months',
-    description: 'Truffaut mlkshk semiotics swag readymade cray gluten-free quinoa vape sriracha kinfolk YOLO church-key banh mi',
-    estimatedImpact: 4,
-  },
-]
-export default class TipList extends Component {
+type Props = {
+  tips: TipsType,
+};
+export default class TipList extends Component<Props> {
 
   render() {
 
+    const tips = this.props.tips;
+
     return (
-      <div className="tiplist-wrapper">
+      <div className="tip-list-wrapper">
+        <h2>TIPS TO IMPROVE CREDIT</h2>
         <ul className="tip-list">
           {tips.map((tip) => {
-            return <Tip
-              title={tip.title}
-              description={tip.description}
-              estimatedImpact={tip.estimatedImpact}
-            />
+            return <Tip tip={tip} />
           })}
         </ul>
       </div>
