@@ -22,8 +22,9 @@ export default class Factors extends Component<Props> {
         <h2>CREDIT FACTORS</h2>
 
         <ul className="factors-list">
-          {factors.map((factor) => {
+          {factors.map((factor, i) => {
             return <Factor
+              key={i}
               factor={factor}
             />
           })}

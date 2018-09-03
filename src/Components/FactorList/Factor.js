@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import type { FactorType } from '../../types';
 import './Factor.css';
@@ -6,7 +8,7 @@ type Props = {
   factor: FactorType
 }
 
-const Factor = (props) => {
+const Factor = (props: Props) => {
 
   const {
     title,
