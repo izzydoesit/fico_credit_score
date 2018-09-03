@@ -1,9 +1,13 @@
 import React from 'react';
+import type { FactorType } from '../../types';
 import './Factor.css';
+
+type Props = {
+  factor: FactorType
+}
 
 const Factor = (props) => {
 
-  console.log('props', props)
   const {
     title,
     description,
@@ -12,10 +16,14 @@ const Factor = (props) => {
 
   return (
     <li className="factor-item">
-      <p>{title}</p>
-      <p>{description}</p>
-      <p>{direction}</p>
-      <p>{value}</p>
+      <div className="factor-info">
+        <p className="factor-title">{title}</p>
+        <p className="factor-description">{description}</p>
+      </div>
+      <div className="factor-feedback">
+        <p className="factor-direction">{direction}</p>
+        <p className="factor-value">{value} years</p>
+      </div>
     </li>
   )
 }
