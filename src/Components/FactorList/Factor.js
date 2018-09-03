@@ -3,11 +3,19 @@ import './Factor.css';
 
 const Factor = (props) => {
 
+  console.log('props', props)
+  const {
+    title,
+    description,
+    direction,
+    value, } = props.factor;
+
   return (
     <li className="factor-item">
-      <p>{this.props.name}</p>
-      <p>{this.props.statistic}</p>
-      <p>{this.props.rating}</p>
+      <p>{title}</p>
+      <p>{description}</p>
+      <p>{direction}</p>
+      <p>{value}</p>
     </li>
   )
 }
